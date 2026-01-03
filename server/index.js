@@ -31,7 +31,7 @@ import AffiliateStat from "./models/AffiliateStat.js";
 
 dotenv.config();
 const app = express();
-const __dirname = path.resolve();
+//const __dirname = path.resolve();
 
 app.use(express.json());
 app.use(helmet());
