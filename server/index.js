@@ -9,7 +9,7 @@ import clientRoutes from "./routes/client.js";
 import generalRoutes from "./routes/general.js";
 import managementRoutes from "./routes/management.js";
 import salesRoutes from "./routes/sales.js";
-import path from "path";
+//import path from "path";
 
 // data imports from our mock data
 import User from "./models/User.js";
@@ -41,7 +41,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 //serve static files
-app.use(express.static(path.join(__dirname, "client", "build"))); // adjust path
+//app.use(express.static(path.join(__dirname, "client", "build"))); // adjust path
 
 /*ROUTES */
 
@@ -50,9 +50,9 @@ app.use("/general", generalRoutes);
 app.use("/management", managementRoutes);
 app.use("/sales", salesRoutes);
 
-app.get("*", (req, res) => {
+/* app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "client", "build", "index.html"));
-});
+}); */
 
 /*MONGOOSE SETUP*/
 
